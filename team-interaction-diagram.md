@@ -5,12 +5,12 @@ This diagram illustrates the communication and dependency structure between the 
 ```mermaid
 graph TD;
     subgraph "Value Stream Teams"
-        Team_A[Editor Experience]
-        Team_B[Reviewer & Audit UI]
+        Team_A["Editor Experience"]
+        Team_B["Reviewer & Audit UI"]
     end
 
     subgraph "Platform Team"
-        Team_C[Platform (Trust & Infra)]
+        Team_C["Platform (Trust & Infra)"]
     end
 
     Team_A -- Document for Review --> Team_B
