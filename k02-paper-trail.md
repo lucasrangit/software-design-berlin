@@ -13,7 +13,7 @@ Users: 500 internal consultants, 2,000 client users across 30 organisations. Pea
 3. Role-based access control with client-level isolation
 4. Full-text search across all documents with permission-aware results
 5. Version comparison (diff) between any two versions of a document
-6. Offline access for consultants travelling to client sites
+6. Offline access for consultants traveling to client sites.
 
 ## Constraints
 
