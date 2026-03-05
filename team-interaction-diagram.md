@@ -3,14 +3,14 @@
 This diagram illustrates the communication and dependency structure between the teams, following the principles of Team Topologies. The architecture of the system should reflect these communication paths.
 
 ```mermaid
-graph TD
+graph TD;
     subgraph "Value Stream Teams"
-        Team_A[Team A<br/>Stream-Aligned<br/>(Editor Experience)]
-        Team_B[Team B<br/>Stream-Aligned<br/>(Reviewer & Audit UI)]
+        Team_A[Editor Experience]
+        Team_B[Reviewer & Audit UI]
     end
 
     subgraph "Platform Team"
-        Team_C[Team C<br/>Platform/Enabling<br/>(Trust & Infra)]
+        Team_C[Platform (Trust & Infra)]
     end
 
     Team_A -- Document for Review --> Team_B
