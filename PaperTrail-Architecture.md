@@ -44,6 +44,35 @@ graph TD
 
 ## 2. System Context
 
+As Conway's Law suggests, our system architecture will directly mirror our team structure. Therefore, our primary System Context diagram shows three systems, each corresponding to one of our teams. The services owned by these teams will live within these system boundaries.
+
+```mermaid
+C4Context
+    title System Context Diagram reflecting Team Ownership
+
+    Person(creator, "Content Creator", "A user who creates and edits documents. (Internal Consultant or Client)")
+    Person(auditor, "Reviewer / Auditor", "A user who reviews, verifies, and audits documents. (Internal Consultant or Client)")
+
+    System_Boundary(c1, "PaperTrail") {
+        System(editor_ui, "Editor Experience System", "Owned by Team A. The user-facing application for content creation.")
+        System(reviewer_ui, "Reviewer & Audit System", "Owned by Team B. The user-facing application for auditing and verification.")
+        System(trust_platform, "Trust Platform", "Owned by Team C. The backend platform providing tamper-proof storage and CI/CD.")
+    }
+
+    System_Ext(sharepoint, "SharePoint", "Legacy system for document migration.")
+    System_Ext(ad, "Client Active Directory", "External identity provider for client users.")
+
+    Rel(creator, editor_ui, "Creates and edits documents using")
+    Rel(auditor, reviewer_ui, "Reviews and verifies documents using")
+
+    Rel(editor_ui, trust_platform, "Stores/versions documents via")
+    Rel(reviewer_ui, trust_platform, "Reads documents/audit trails via")
+
+    Rel(editor_ui, sharepoint, "Reads documents from for migration")
+    Rel(creator, ad, "Authenticates with")
+    Rel(auditor, ad, "Authenticates with")
+```
+
 ### Users & Actors
 - Internal consultants (500)
 - Client users (2,000 across 30 organisations)
