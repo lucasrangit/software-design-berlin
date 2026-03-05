@@ -1,3 +1,5 @@
+https://robinpokorny.github.io/ai-arch-katas/katas/02-papertrail/
+
 # Kata 2: PaperTrail
 
 A compliance document management system for regulated industries.

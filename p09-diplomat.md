@@ -1,3 +1,5 @@
+https://robinpokorny.github.io/ai-arch-katas/personas/09-the-diplomat/
+
 # The Diplomat
 
 “Show me your org chart and I’ll show you your architecture. Conway was right and we keep pretending he wasn’t.”
